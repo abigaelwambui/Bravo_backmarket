@@ -3,34 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header class="background">
         <div class="logo">
-            <img src="Assets/Bravo logo.png" alt="logo" class="logo-image" width="20%">
+            <img src="Assets/Bravo logo.png" alt="Bravo Logo" class="logo-image" width="20%">
         </div>
     </header>
+
     <div class="heading">
         <h1 class="heading-3">Who goes there?</h1>
     </div>
-    <div class="input">
-        <input name="email" id="email" type="email" autocomplete="off" size="30" placeholder="Email*" />
-    </div>
-    <div class="next">
-        <br>
-        <button class="next-button" id="sumbit-login" type="submit">
-            <span class="bold">Next</span>
-        </button>
-    </div>
+
+    <!-- Added autocomplete="off" to form and explicit data attributes to block LastPass -->
+    <form autocomplete="off" data-lpignore="true">
+        <div class="input-group">
+            <input 
+                name="email" 
+                id="email" 
+                type="email" 
+                autocomplete="one-time-code" 
+                size="30" 
+                placeholder="Email*" 
+                required 
+                data-lpignore="true"
+            />
+        </div>
+        <div class="next-group">
+            <button class="next-button" id="submit-login" type="submit">
+                <span class="bold">Next</span>
+            </button>
+        </div>
+    </form>
+
     <div class="centre">
         <hr class="line">
-         <span class="or">or</span>
-         <hr class="line">
+        <span class="or">or</span>
+        <hr class="line">
     </div>
-    <p><button><img src="Assets/image8-2.webp" alt="Google image">Continue with google</button></p>
-    <p><button><img src="Assets/Apple-Logo.jpg" alt="Apple image">Continue with apple</button></p>
-      <a href="#" class="privacy-link">Privacy policy</a>
+
+    <div class="social-login">
+        <p>
+            <button type="button" class="btn-social btn-google">
+                <img src="Assets/image8-2.webp" alt="Google logo">Continue with Google
+            </button>
+        </p>
+        <p>
+            <button type="button" class="btn-social btn-apple">
+                <img src="Assets/Apple-Logo.jpg" alt="Apple logo">Continue with Apple
+            </button>
+        </p>
+    </div>
+      </div>
+
+    <a href="#" class="privacy-link">Privacy Policy</a>
 </body>
 </html>
